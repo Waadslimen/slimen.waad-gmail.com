@@ -63,7 +63,7 @@
         'views/snippets/column_wamia.xml',
         'views/snippets/slider_2.xml',
         'views/snippets/nest_newsletter.xml',
-        'views/snippets/nest_info.xml',
+      
 
         
         
