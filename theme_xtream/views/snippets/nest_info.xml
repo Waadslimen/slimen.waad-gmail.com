@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+	<template id="nest_info" name="nest info">
+		<section class="s_features pt32 pb32">
+			<div class="container-fluid">
+				<div class="col-lg-4 st-info" >
+					<div> 
+					<a href="#">
+						<img class="img img-fluid d-block" src="/theme_xtream/static/src/img/bg-img/banner-15_wiwgjI6.png" data-index="5" data-name="Image"/>
+					</a>
+					<div class="banner-text-style2">
+						<h5 class="st-10">
+							The best Organic Products Online
+						</h5>
+						<a href="#" class="btn-shop">
+							Shop Now <i class="fi-rs-arrow-small-right"></i>
+						</a>
+					</div>						
+				</div>
+				</div>
+			</div>
+		</section>
+	</template>
+
+	<template id="nest bar" inherit_id="website.snippets" name="nest bar">
+		<xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+			<t t-snippet="theme_xtream.nest_info"
+					t-thumbnail="/theme_xtream/static/src/img/bg-img/tes-1.jpg"/>
+		</xpath>
+	</template>
+
+
+
+</odoo>
