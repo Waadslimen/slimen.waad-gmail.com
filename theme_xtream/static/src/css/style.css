@@ -1368,9 +1368,10 @@ template {
   color: #000000;
 }
 
+
 .top_nav {
     padding: 20px 0px 10px 0px;
-   
+    background-color: #131921;
 }
 
 .top_nav .wrapper {

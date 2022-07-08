@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+<template id="s_dynamic_product" name="Dynamic product">
+	<t t-call="website.s_dynamic_snippet_template">
+		<t t-set="snippet_name" t-value="'s_dynamic_snippet'"/>
+	</t>
+</template>
+<template id="website.s_dynamic_snippet_options_template">
+	<div t-attf-data-js="#{snippet_name}" t-attf-data-selector="#{snippet_selector}" data-no-preview="true">
+		<we-select string="Filter" data-name="filter_opt" data-attribute-name="filterId" data-no-preview="true">
+		</we-select>
+		<we-select string="Template" data-name="template_opt" data-attribute-name="templateKey" data-no-preview="true">
+		</we-select>
+		
+		<we-select string="Fetched elements" data-name="number_of_records_opt" data-attribute-name="numberOfRecords" data-no-preview="true">
+			<we-button t-foreach="range(1, 17)" t-as="value" t-att-data-select-data-attribute="value" t-esc="value"/>
+		</we-select>
+		<we-select string="Category" data-name="product_category_opt" data-attribute-name="productCategoryId" data-no-preview="true">
+			<we-button data-select-data-attribute="all">All Products</we-button>
+			<we-button data-select-data-attribute="current">Current Category or All</we-button>
+		</we-select>
+		<we-input string="Product names" class="o_we_large" data-name="product_names_opt"
+			data-attribute-name="productNames" data-no-preview="true" data-select-data-attribute=""
+			placeholder="e.g. lamp,bin" title="Comma-separated list of parts of product names"/>
+		<we-title class="mt-2 o_grouping_message">
+			<t t-esc="grouping_message"/>
+		</we-title>
+		<we-select string="⌙ Desktop" data-name="number_of_elements_opt" data-attribute-name="numberOfElements" data-no-preview="true">
+			<!-- &emsp; -->
+			<we-button data-select-data-attribute="1">1</we-button>
+			<we-button data-select-data-attribute="2">2</we-button>
+			<we-button data-select-data-attribute="3">3</we-button>
+			<we-button data-select-data-attribute="4">4</we-button>
+			<we-button data-select-data-attribute="6">6</we-button>
+		</we-select>
+		<we-select string="⌙ Mobile" data-name="number_of_elements_small_devices_opt" data-attribute-name="numberOfElementsSmallDevices" data-no-preview="true">
+			<!-- &emsp; -->
+			<we-button data-select-data-attribute="1">1</we-button>
+			<we-button data-select-data-attribute="2">2</we-button>
+			<we-button data-select-data-attribute="3">3</we-button>
+		</we-select>
+		
+		<t t-out="0"/>
+	</div>
+</template>
+	
+	<template id="product_barr" inherit_id="website.snippets" name="product barr">
+		<xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+			<t t-snippet="theme_xtream.s_dynamic_product"
+					t-thumbnail="/theme_xtream/static/src/img/bg-img/tes-1.jpg"/>
+		</xpath>
+	</template>
+	
+	<record id="website.s_dynamic_snippet_000_scss" model="ir.asset">
+		<field name="name">Dynamic snippet 000 SCSS</field>
+		<field name="bundle">web.assets_frontend</field>
+		<field name="path">website/static/src/snippets/s_dynamic_snippet/000.scss</field>
+	</record>
+
+	<record id="website.s_dynamic_snippet_000_js" model="ir.asset">
+		<field name="name">Dynamic snippet 000 JS</field>
+		<field name="bundle">web.assets_frontend</field>
+		<field name="path">website/static/src/snippets/s_dynamic_snippet/000.js</field>
+	</record>
+
+	
+	</odoo>

@@ -64,6 +64,7 @@
         'views/snippets/slider_2.xml',
         'views/snippets/nest_newsletter.xml',
        
+       
 
         
         
