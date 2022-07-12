@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\theme_xtream"
+    "\\theme_xtream",
+    "\\theme_xtream\\controllers",
+    "\\theme_xtream\\static",
+    "\\theme_xtream\\views",
+    "\\theme_xtream\\views\\snippets"
   ],
   "SelectedNode": "\\theme_xtream",
   "PreviewInSolutionExplorer": false
